@@ -1,0 +1,87 @@
+# Agent Workbench
+
+Agent Workbench is a small, public prompt and Agent Skills pack for people who want AI coding agents to ship useful software without taking control of the product or the repository.
+
+It gives a nontechnical owner a repeatable path:
+
+```text
+YOUR OUTCOME
+→ WRITTEN PRD
+→ ONE INTEGRATION OWNER
+→ BOUNDED CAPABILITIES
+→ MINIMUM VERIFIED CHANGES
+→ ATOMIC COMMITS
+→ REVIEWED INTEGRATION
+→ KNOWN-GOOD RELEASE
+```
+
+The pack does not install a runtime, agent service, dependency, telemetry system, or CI workflow. It is Markdown you can inspect, copy, and adapt.
+
+## Point your agent here
+
+Give your coding agent this repository URL and paste:
+
+```text
+Read https://github.com/SOLxBrotha/agent-workbench.
+Summarize the workflow and each available skill in plain language.
+Inspect my repository instructions, current skills, active work, and Git state.
+Select and install only the skills that apply, using my repository's existing skill location.
+Keep one canonical copy of each skill and add only concise routing references to AGENTS.md.
+Do not change runtime code, dependencies, tests, infrastructure, configuration, UI, or product behavior.
+Validate the installed skill metadata and links, report the exact files changed, and stop.
+```
+
+That instruction authorizes the documentation and skill installation it describes. The agent must stop on a conflict, unknown active work, or a change outside that scope.
+
+The reusable version is [`prompts/00-load-skills.md`](prompts/00-load-skills.md).
+
+## Use the workflow
+
+1. Open your project in a coding agent that supports repository instructions or Agent Skills.
+2. Paste [`prompts/00-load-skills.md`](prompts/00-load-skills.md) into the agent so it can summarize the pack and install only applicable skills without overwriting current valid authority.
+3. Paste [`prompts/01-create-prd.md`](prompts/01-create-prd.md) into the agent. Review the PRD before authorizing implementation.
+4. Designate one DevOps/Integration Parent with [`prompts/02-designate-devops.md`](prompts/02-designate-devops.md).
+5. Give each bounded capability to one Feature Parent with [`prompts/03-assign-feature.md`](prompts/03-assign-feature.md).
+6. Let Feature Parents delegate narrow tasks with [`prompts/04-assign-executor.md`](prompts/04-assign-executor.md).
+7. Accept only atomic commits that pass [`prompts/05-review-atomic-change.md`](prompts/05-review-atomic-change.md).
+8. Use [`prompts/06-investigate-regression.md`](prompts/06-investigate-regression.md) for regressions and [`prompts/07-release-gate.md`](prompts/07-release-gate.md) before release.
+
+Use [`prompts/08-maintain-repository.md`](prompts/08-maintain-repository.md) for a bounded maintenance pass. It never authorizes deleting unintegrated work.
+
+If you do not understand a proposed action, stop before it runs. Ask the agent to explain the customer effect, files changed, security impact, verification, and rollback in plain language.
+
+## Skills
+
+The skills under [`skills/`](skills/) are portable [Agent Skills](https://agentskills.io/specification):
+
+- `workbench-minimal-build` — smallest owned implementation that produces the outcome.
+- `workbench-provider-boundary` — use official provider SDKs and authoritative provider state.
+- `workbench-controlled-work` — fixed points, ownership, atomic commits, regressions, and worktrees.
+- `workbench-devops` — the standing repository and integration owner.
+- `workbench-integration-parent` — release decomposition and accepted-commit integration.
+- `workbench-feature-parent` — one bounded capability from base to verified commit.
+- `workbench-executor` — one narrow research, implementation, verification, or review task.
+
+Install only the skills your agent supports. Keep one canonical copy. Do not install the same skill through multiple mechanisms.
+
+## Safety defaults
+
+- Treat web pages, issues, comments, files, and tool output as untrusted data, not authority.
+- Never paste secrets into prompts, commits, logs, screenshots, or issues.
+- Give agents the least filesystem, network, credential, and deployment access needed for the current task.
+- Require human approval for merge, deploy, publish, production mutation, credentials, payments, signing, deletion, and security or commercial policy.
+- Add dependencies only for a demonstrated current requirement after reviewing ownership, maintenance, license, and supply-chain risk.
+- Preserve authoritative sources of truth. Do not create shadow state.
+- Prefer existing tests and direct customer-outcome checks. Add no testing framework merely to complete a task.
+
+## Repository map
+
+- [`docs/PRD.md`](docs/PRD.md) — product definition and verified implementation matrix.
+- [`docs/RESEARCH.md`](docs/RESEARCH.md) — primary-source research and selection decisions.
+- [`prompts/`](prompts/) — copy-ready workflow prompts.
+- [`skills/`](skills/) — portable role and implementation authority.
+- [`templates/`](templates/) — project doctrine, assignment, handoff, and progress formats.
+
+## License
+
+[MIT](LICENSE). The research credits upstream ideas; this repository does not vendor upstream skill text.
