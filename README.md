@@ -22,9 +22,9 @@ The pack does not install a runtime, agent service, dependency, telemetry system
 Open the repository you want to improve, give its coding agent this URL, and paste the following instruction:
 
 ```text
-Read https://github.com/SOLxBrotha/agent-workbench/tree/v1.0.0 and follow prompts/00-load-skills.md.
-Give me a plain-language summary of the workflow and every skill.
-Use my stated next task and working model to select the skills that apply, and install only those skills.
+Use https://github.com/SOLxBrotha/agent-workbench/tree/v1.0.1 only as a generic skills source and follow prompts/00-load-skills.md.
+First give me a plain-language summary of the workflow and every available skill.
+Then use my stated next task, working model, and this repository's current authority to select the skills that apply. Explain the selection and install only that dependency-complete set.
 Use the repository's existing project-local skill location, keep one canonical copy, and add concise routing to its applicable agent-instruction file.
 Make documentation-only changes: do not change runtime code, dependencies, tests, infrastructure, configuration, UI, or product behavior.
 Validate the installation, report selected and skipped skills with reasons and exact changed files, then stop.
@@ -73,7 +73,7 @@ Use this selection map instead of copying every skill by default:
 
 Role skills are unnecessary for a solo task with no delegation. Every role skill depends on `workbench-controlled-work`; provider work also requires `workbench-provider-boundary`. Install complete skill packages only for the stated next task. Keep one canonical copy and do not install the same skill through multiple mechanisms.
 
-The loader distinguishes four actions: **inspect** the source, **select** by the stated task, **install** complete selected packages, and **activate** them through the target repository's instruction file. It never writes to a user-global skill directory unless the user explicitly asks.
+The loader distinguishes four actions: **inspect** the source, **summarize and select** by the stated task, **install** complete selected packages, and **activate** them through the target repository's instruction file. The workbench supplies reusable workflow guidance only; its repository identity, examples, and history never become target-project context. It never writes to a user-global skill directory unless the user explicitly asks.
 
 ## Update or remove
 

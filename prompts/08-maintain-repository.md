@@ -14,4 +14,4 @@ Protect:
 
 Propose deletions with evidence and recovery path before mutation. Git history may archive committed obsolete documentation; it does not protect uncommitted files. Never run broad destructive commands or delete a worktree until its valuable changes and commits are accounted for.
 
-After authorization, perform one bounded cleanup capability, verify repository and worktree state, create one atomic commit when tracked files changed, and report through `https://github.com/SOLxBrotha/agent-workbench/blob/v1.0.0/skills/workbench-devops/references/PROGRESS.md` with exactly one next action.
+After authorization, perform one bounded cleanup capability, verify repository and worktree state, create one atomic commit when tracked files changed, and report through `https://github.com/SOLxBrotha/agent-workbench/blob/v1.0.1/skills/workbench-devops/references/PROGRESS.md` with exactly one next action.
