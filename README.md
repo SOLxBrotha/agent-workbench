@@ -17,21 +17,20 @@ YOUR OUTCOME
 
 The pack does not install a runtime, agent service, dependency, telemetry system, or CI workflow. It is Markdown you can inspect, copy, and adapt.
 
-## Point your agent here
+## Give this repository to an agent
 
-Give your coding agent this repository URL and paste:
+Open the repository you want to improve, give its coding agent this URL, and paste the following instruction:
 
 ```text
-Read https://github.com/SOLxBrotha/agent-workbench.
-Summarize the workflow and each available skill in plain language.
-Inspect my repository instructions, current skills, active work, and Git state.
-Select and install only the skills that apply, using my repository's existing skill location.
-Keep one canonical copy of each skill and add only concise routing references to AGENTS.md.
-Do not change runtime code, dependencies, tests, infrastructure, configuration, UI, or product behavior.
-Validate the installed skill metadata and links, report the exact files changed, and stop.
+Read https://github.com/SOLxBrotha/agent-workbench and follow prompts/00-load-skills.md.
+Give me a plain-language summary of the workflow and every skill.
+Inspect this repository, select the skills that apply, and install only those skills.
+Use the repository's existing skill location, keep one canonical copy, and add concise routing to AGENTS.md.
+Make documentation-only changes: do not change runtime code, dependencies, tests, infrastructure, configuration, UI, or product behavior.
+Validate the installation, report selected and skipped skills with reasons and exact changed files, then stop.
 ```
 
-That instruction authorizes the documentation and skill installation it describes. The agent must stop on a conflict, unknown active work, or a change outside that scope.
+That instruction authorizes only the skill and repository-instruction edits it describes. It does not authorize implementation, merge, deployment, destructive cleanup, credentials, or product-policy changes.
 
 The reusable version is [`prompts/00-load-skills.md`](prompts/00-load-skills.md).
 
@@ -62,7 +61,18 @@ The skills under [`skills/`](skills/) are portable [Agent Skills](https://agents
 - `workbench-feature-parent` — one bounded capability from base to verified commit.
 - `workbench-executor` — one narrow research, implementation, verification, or review task.
 
-Install only the skills your agent supports. Keep one canonical copy. Do not install the same skill through multiple mechanisms.
+Use this selection map instead of copying every skill by default:
+
+| Current work | Skills to load |
+| --- | --- |
+| Any owned software change | `workbench-controlled-work`, `workbench-minimal-build` |
+| External API, SDK, platform, or managed service | Add `workbench-provider-boundary` |
+| One standing agent owns repository and release state | Add `workbench-devops` |
+| One agent coordinates a multi-capability release | Add `workbench-integration-parent` |
+| One agent owns a bounded capability | Add `workbench-feature-parent` |
+| A parent delegates one narrow task | Add `workbench-executor` |
+
+Role skills are unnecessary for a solo task with no delegation. Install only the skills the current repository and work require. Keep one canonical copy and do not install the same skill through multiple mechanisms.
 
 ## Safety defaults
 
