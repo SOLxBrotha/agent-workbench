@@ -33,7 +33,7 @@ Fix the rows before implementation. Use `✅ PASS` only after evidence is observ
 
 | # | Capability | Owner | Dependencies | State | Evidence |
 | ---: | --- | --- | --- | --- | --- |
-| 1 | [Bounded capability] | [Feature Parent] | None | PENDING | |
+| 1 | [Bounded capability] | [Solo owner or capability owner] | None | PENDING | |
 | 2 | Provider-boundary audit | [Owner] | All implementation | PENDING | |
 | 3 | Minimal-build audit | [Owner] | All implementation | PENDING | |
 | 4 | Product/process acceptance checks | [Owner] | Audits | PENDING | |

@@ -1,9 +1,11 @@
 ---
 name: workbench-executor
-description: Use for one narrowly assigned research, implementation, verification, reproduction, or exact-diff review task under a Feature Parent. Return evidence and stop.
+description: Use when a capability owner delegates one narrow research, implementation, verification, reproduction, or exact-diff review task. Return evidence and stop. Skip when no task is delegated.
 ---
 
 # Executor
+
+Apply `workbench-controlled-work` and every implementation skill named by the capability owner.
 
 Read the exact assignment and verify base SHA, owner, allowed/protected paths, mandatory skills, authoritative sources, expected output, outcome, and stop conditions.
 

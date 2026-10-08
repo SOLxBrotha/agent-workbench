@@ -5,6 +5,7 @@ This package was assembled from current first-party guidance, a proven fixed-poi
 ## Primary sources
 
 - [OpenAI: Rethinking skills and prompts for GPT-6 Astra](https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra) supports concise skills, precise descriptions, progressive disclosure, and removing contradictory or overlapping instructions.
+- [OpenAI: Skill authoring](https://learn.chatgpt.com/docs/build-skills) supports task-specific descriptions, progressive disclosure, and evaluation of explicit, implicit, ambiguous, and negative invocations.
 - [OpenAI: Running Codex safely](https://openai.com/index/running-codex-safely/) supports sandboxing, bounded permissions, restricted network access, controlled credentials, and auditability.
 - [OpenAI: Harness engineering](https://openai.com/index/harness-engineering/) supports a repository as the system of record, a short map to deeper authority, isolated work, and agent-legible verification.
 - [GitHub: Copilot coding agent risks and mitigations](https://docs.github.com/en/copilot/concepts/security-governance-and-network-settings/risks-and-mitigations) documents unvalidated-code, prompt-injection, credential, network, and review risks.
@@ -13,6 +14,8 @@ This package was assembled from current first-party guidance, a proven fixed-poi
 - [NIST Secure Software Development Framework](https://csrc.nist.gov/pubs/sp/800/218/final) supports integrating secure practices into the lifecycle, reducing vulnerabilities, limiting impact, and preventing recurrence.
 - [Agent Skills specification](https://agentskills.io/specification) defines the portable `SKILL.md` format used here.
 - [AGENTS.md](https://agents.md/) defines the open repository-instruction convention used by the pack.
+- [Claude Code skills](https://code.claude.com/docs/en/skills) documents project-local skills, progressive disclosure, and model-invocation controls for another widely used agent harness.
+- [GitHub open-source guidance](https://opensource.guide/starting-a-project/) supports a README that explains purpose, use, contribution, and help paths for nontechnical adopters.
 
 ## Public repository survey
 
@@ -80,9 +83,9 @@ The Workbench stays tool-agnostic and dependency-free.
 - The repository owner's current instruction is highest authority.
 - Provider boundaries use official SDKs and provider-owned truth.
 - Owned behavior uses the minimum direct logic required now.
-- One DevOps/Integration Parent maintains repository truth and the known-good head.
-- One Feature Parent owns each bounded capability.
-- Executors receive narrow assignments and stop on decisions outside scope.
+- Solo work keeps one owner and does not manufacture agent roles.
+- Coordinated work has one repository/integration owner maintaining repository truth and the known-good head.
+- One capability owner owns each coordinated capability; delegated task workers receive narrow assignments and stop on decisions outside scope.
 - Independent capabilities may run in parallel; shared mutable boundaries serialize.
 - One verified capability equals one atomic commit.
 - Regressions start with the newest change after the last known-good head.
@@ -93,11 +96,11 @@ The Workbench stays tool-agnostic and dependency-free.
 
 | Source authority | Portable treatment |
 | --- | --- |
-| Controlled execution | Retained as `workbench-controlled-work`. |
-| Repository operations | Retained as `workbench-devops`, the standing integration owner and progress reporter. |
-| Integration Parent | Retained as release decomposition and commit acceptance authority. |
-| Feature Parent | Retained as one bounded capability owner. |
-| Executor | Retained as one narrow task role with evidence and stop conditions. |
+| Controlled execution | Retained as `workbench-controlled-work` for solo and coordinated work. |
+| Repository operations | Retained as optional `workbench-devops` when a standing integration owner exists. |
+| Integration Parent | Retained only for multi-capability coordination and commit acceptance. |
+| Feature Parent | Retained only when coordinated work assigns one bounded capability owner. |
+| Executor | Retained only when a capability owner delegates one narrow task. |
 | Minimal build | Retained without project-specific names or state. |
 | Provider boundary | Retained as `workbench-provider-boundary`; official provider capability and provider-owned truth remain mandatory. |
 | Design and copy authority | Project-specific references are excluded. The repository doctrine preserves owner-approved product, design, and copy decisions. |

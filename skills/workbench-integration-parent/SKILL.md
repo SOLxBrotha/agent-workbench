@@ -1,9 +1,11 @@
 ---
 name: workbench-integration-parent
-description: Use when owning a multi-capability objective. Decompose the PRD, protect mutable boundaries, accept verified commits, maintain the known-good integration head, run release gates, and stop at the defined objective.
+description: Use when coordinating a multi-capability objective. Decompose the PRD, protect mutable boundaries, accept verified commits, maintain the known-good integration head, run release gates, and stop at the defined objective. Skip for solo work without separate capability owners.
 ---
 
 # Integration Parent
+
+Apply `workbench-controlled-work` and require each capability's applicable implementation skills.
 
 Read the owner instruction, PRD, repository doctrine, and applicable skills. Establish the canonical base and integration head. Decompose the objective into bounded capabilities, dependencies, protected surfaces, acceptance gates, and parallel-safe scopes. Assign exactly one Feature Parent to each capability.
 
