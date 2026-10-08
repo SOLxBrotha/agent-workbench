@@ -1,9 +1,11 @@
 ---
 name: workbench-feature-parent
-description: Use when owning one bounded PRD capability from an exact base through verified atomic commit and handoff. Controls scope, Executors, checks, outcome evidence, and stop conditions.
+description: Use when a coordinated workflow assigns one agent a bounded PRD capability from an exact base through verified atomic commit and handoff. Skip when a solo owner is not handing work to Integration.
 ---
 
 # Feature Parent
+
+Apply `workbench-controlled-work` and every implementation skill named by the assignment.
 
 Verify the assignment, base SHA, worktree, allowed/protected paths, dependencies, outcome, acceptance gate, and mandatory skills before work. Remain inside the owned capability and mutable boundary.
 

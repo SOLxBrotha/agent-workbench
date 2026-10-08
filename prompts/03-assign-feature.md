@@ -1,6 +1,6 @@
 # Assign one Feature Parent
 
-Create one assignment for one bounded PRD capability using `templates/ASSIGNMENT.md`.
+Create one assignment for one bounded PRD capability using `https://github.com/SOLxBrotha/agent-workbench/blob/v1.0.0/templates/ASSIGNMENT.md`.
 
 The assignment must:
 
@@ -12,7 +12,7 @@ The assignment must:
 - state the observable customer outcome and acceptance gate;
 - forbid scope expansion and unrelated cleanup;
 - require one verified atomic commit per capability;
-- require return through `templates/HANDOFF.md`.
+- require return through `https://github.com/SOLxBrotha/agent-workbench/blob/v1.0.0/templates/HANDOFF.md`.
 
 Allow parallel execution only if mutable paths, state boundaries, and provider mutation paths do not overlap. Otherwise serialize the assignments.
 

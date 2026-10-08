@@ -27,10 +27,10 @@ Uncertainty requires verification or a decision from the owner. An agent may not
 
 ## Execution
 
-- Designated DevOps/Integration Parent: `[THREAD OR OWNER]`.
+- Coordinated-work repository/integration owner: `[AGENT OR SESSION; N/A FOR SOLO WORK]`.
 - Canonical integration branch: `[BRANCH]`.
 - Every capability records its base SHA, owner, mutable paths, protected paths, dependencies, outcome, and acceptance gate.
-- One Feature Parent owns each capability. Executors receive narrower tasks.
+- In coordinated work, one capability owner owns each capability and task workers receive narrower tasks. A solo owner may carry one capability without role skills.
 - Parallelize only independent mutable scopes. Serialize shared boundaries.
 - Integrate verified commits and evidence, never uncontrolled working trees.
 - Compare a regression first with the newest atomic change after the last known-good SHA.
