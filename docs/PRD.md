@@ -6,7 +6,7 @@ A nontechnical product owner can direct one or more AI coding agents through a v
 
 ## Current release
 
-- Release: `0.2`
+- Release: `0.3`
 - Form: public, dependency-free Markdown prompt and Agent Skills pack
 - Repository owner: `SOLxBrotha`
 - Status: implementation complete when every matrix row is `✅ PASS`
@@ -51,23 +51,23 @@ A nontechnical product owner can direct one or more AI coding agents through a v
 
 ## Implementation matrix
 
-The matrix is fixed for release `0.2`. Mark a row `✅ PASS` only after its evidence is observed.
+The matrix is fixed for release `0.3`. Mark a row `✅ PASS` only after its evidence is observed.
 
 | # | Step | State | Evidence |
 | ---: | --- | --- | --- |
 | 1 | Define user outcome and authority model | ✅ PASS | Required behavior and security contract are explicit in this PRD. |
 | 2 | Survey source workflow authorities | ✅ PASS | Seven portable authorities map fixed-point, role, minimal-build, provider, Git, and regression rules without product-specific names or state. |
 | 3 | Research current primary and upstream sources | ✅ PASS | `docs/RESEARCH.md` cites OpenAI, GitHub, NIST, Agent Skills, AGENTS.md, and reviewed public repositories. |
-| 4 | Create nontechnical start path | ✅ PASS | `README.md` provides one copy-ready repository instruction, an ordered eight-step workflow, and a plain-language safety gate. |
+| 4 | Create nontechnical start path | ✅ PASS | `README.md` provides one copy-ready URL instruction, an explicit applicability map, the ordered workflow, and a plain-language authority boundary. |
 | 5 | Create PRD and repository doctrine templates | ✅ PASS | `templates/PRD_TEMPLATE.md` and `templates/REPOSITORY_DOCTRINE.md` contain fixed outcomes, authority, matrix, and closure gates. |
 | 6 | Create DevOps and multi-agent prompt pack | ✅ PASS | Nine prompts cover skill loading, PRD, DevOps, Feature Parent, Executor, atomic review, regression, release, and maintenance. |
 | 7 | Create portable Agent Skills | ✅ PASS | Seven concise skills define implementation and execution roles without a runtime dependency. |
 | 8 | Add public-repository safety and contribution controls | ✅ PASS | `SECURITY.md`, `CONTRIBUTING.md`, `.gitignore`, and PR template are present. |
-| 9 | Validate structure, links, skill metadata, and prohibited branding | ✅ PASS | Seven skill names match their directories; nine prompt contracts, local/external links, diff, secret patterns, and zero prohibited product references pass. |
+| 9 | Validate structure, links, skill metadata, and private-context exclusion | ✅ PASS | Seven skill validators, skill-directory parity, local and external links, secret signatures, changed-file allowlist, and private-context scans of the working tree and Git history pass. |
 | 10 | Publish the generic public GitHub repository | ✅ PASS | `https://github.com/SOLxBrotha/agent-workbench` is public; the release gate verifies clean generic history and remote `main` parity. |
 | 11 | Provider-boundary audit | ✅ PASS | Static Markdown only; no provider protocol, SDK, credentials, provider state, or provider configuration exists. |
 | 12 | Minimal-build audit | ✅ PASS | The loader uses existing repository conventions and adds no installer runtime, dependency, automation, or duplicate authority. |
-| 13 | Product acceptance checks | ✅ PASS | The copy-ready URL prompt requires summary, applicability selection, bounded installation, validation, exact-file reporting, and stop; public clone and generic naming pass at release. |
+| 13 | Product acceptance checks | ✅ PASS | The one-URL prompt contract requires summary, explicit applicability decisions, bounded installation, validation, exact-file reporting, and stop; all assertions pass. |
 
 ## Acceptance criteria
 
