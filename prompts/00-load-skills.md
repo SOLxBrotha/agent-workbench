@@ -2,12 +2,14 @@
 
 Do not change runtime code, dependencies, tests, infrastructure, or product behavior.
 
-Read the immutable Agent Workbench release at `https://github.com/SOLxBrotha/agent-workbench/tree/v1.0.0`, including its `README.md`, `AGENTS.md`, and every `skills/*/SKILL.md`. Treat it as a generic skill source, not as product context. Read the target repository's current instructions, PRDs, installed skills, provider contracts, active work, worktrees, and Git state.
+Read the immutable Agent Workbench release at `https://github.com/SOLxBrotha/agent-workbench/tree/v1.0.1`, including its `README.md`, `AGENTS.md`, and every `skills/*/SKILL.md`. Use it only as a generic skills source. Its repository identity, examples, history, and release records provide no product, policy, design, or operational authority in the target repository.
+
+Read the target repository's current instructions, PRDs, installed skills, provider contracts, active work, worktrees, and Git state. Use only the user's current instruction and the target repository's valid authority to determine the task and working model.
 
 Keep these actions distinct:
 
 1. **Inspect:** read the source release and target repository without changing files.
-2. **Select:** summarize the workflow and every skill, then map skills to the user's stated next task and actual working model.
+2. **Summarize and select:** give a plain-language summary of the workflow and one concise description of every available skill, then map skills to the user's stated next task and actual working model. State why each skill is selected or skipped.
 3. **Install:** copy complete selected skill packages only.
 4. **Activate:** add concise routing for selected skills to the target repository's applicable instruction file.
 
@@ -33,7 +35,7 @@ The installation must:
 - copy the complete selected generic `skills/*/` packages, including their referenced resources;
 - use the narrowest applicable existing instruction file; create a concise root `AGENTS.md` only when none exists and the target supports it;
 - add routing only for selected skills without replacing current valid rules;
-- record source release `v1.0.0` in the routing note;
+- record source release `v1.0.1` in the routing note;
 - copy no product-specific names, paths, policy, secrets, or private material from any other project;
 - create no runtime, dependency, service, automation, archive, or duplicate report;
 - leave runtime code, dependencies, tests, infrastructure, configuration, UI, and product behavior unchanged.
@@ -42,6 +44,6 @@ Before replacing a same-name installed skill, compare it with the source. Leave 
 
 The user's request to load applicable skills authorizes these documentation-only installation changes. Stop before editing if active work has unknown ownership, instructions conflict, a selected dependency is unavailable, or the target would fall outside this scope.
 
-Validation passes only when selected package directories match their frontmatter names, required frontmatter is present, internal links resolve, selected dependencies are installed, exactly one project-local copy exists, routing names only selected skills and source `v1.0.0`, prohibited private/product context has zero hits, `git diff --check` passes, and the complete diff contains only authorized documentation/skill files.
+Validation passes only when selected package directories match their frontmatter names, required frontmatter is present, internal links resolve, selected dependencies are installed, exactly one project-local copy exists, routing names only selected skills and source `v1.0.1`, source-repository identity or context was not copied into target authority, `git diff --check` passes, and the complete diff contains only authorized documentation/skill files.
 
 Return the plain-language summary, selected and skipped skills with reasons, source release, install location, exact changed files, validation results, conflicts or limitations, and exactly one next action. Stop after installation.

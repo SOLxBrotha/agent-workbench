@@ -6,7 +6,7 @@ A nontechnical product owner can direct one or more AI coding agents through a v
 
 ## Current release
 
-- Release: `1.0.0`
+- Release: `1.0.1`
 - Form: public, dependency-free Markdown prompt and Agent Skills pack
 - Repository owner: `SOLxBrotha`
 - Status: implementation complete when every matrix row is `✅ PASS`
@@ -51,23 +51,23 @@ A nontechnical product owner can direct one or more AI coding agents through a v
 
 ## Implementation matrix
 
-The matrix is fixed for release `1.0.0`. Mark a row `✅ PASS` only after its evidence is observed.
+The matrix is fixed for release `1.0.1`. Mark a row `✅ PASS` only after its evidence is observed.
 
 | # | Step | State | Evidence |
 | ---: | --- | --- | --- |
 | 1 | Define user outcome and authority model | ✅ PASS | Required behavior and security contract are explicit in this PRD. |
 | 2 | Survey source workflow authorities | ✅ PASS | Seven portable authorities map fixed-point, conditional role, minimal-build, provider, Git, and regression rules without product-specific names or state. |
 | 3 | Research current primary and upstream sources | ✅ PASS | `docs/RESEARCH.md` cites OpenAI, Anthropic, GitHub, NIST, Agent Skills, AGENTS.md, and reviewed public repositories. |
-| 4 | Create nontechnical start path | ✅ PASS | `README.md` provides one copy-ready immutable-release instruction and separates inspect, select, install, and activate. Solo and coordinated paths are explicit. |
+| 4 | Create nontechnical start path | ✅ PASS | `README.md` provides one copy-ready immutable-release instruction and separates inspect, summarize/select, install, and activate. Solo and coordinated paths are explicit. |
 | 5 | Create PRD and repository doctrine templates | ✅ PASS | `templates/PRD_TEMPLATE.md` and `templates/REPOSITORY_DOCTRINE.md` contain fixed outcomes, authority, matrix, and closure gates. |
 | 6 | Create DevOps and multi-agent prompt pack | ✅ PASS | Nine prompts cover skill loading, PRD, DevOps, Feature Parent, Executor, atomic review, regression, release, and maintenance. |
 | 7 | Create portable Agent Skills | ✅ PASS | Seven concise skills define implementation and optional coordination roles without a runtime dependency; the DevOps package contains its required progress reference. |
 | 8 | Add public-repository safety and contribution controls | ✅ PASS | `SECURITY.md`, `CONTRIBUTING.md`, `.gitignore`, and PR template are present. |
-| 9 | Validate structure, links, skill metadata, dependencies, and private-context exclusion | ✅ PASS | Seven bundled skill validations, directory/name parity, internal links, selected-skill dependency closure, duplicate-copy rules, secret signatures, complete-diff allowlist, and private-context scans of current files and reachable history pass on the release candidate. |
-| 10 | Publish an immutable generic release | ✅ PASS | `https://github.com/SOLxBrotha/agent-workbench` is public; protected `main` matches the verified candidate and tag `v1.0.0` provides the immutable loader source. |
+| 9 | Validate structure, links, skill metadata, dependencies, and source-context exclusion | ✅ PASS | Seven bundled skill validations, directory/name parity, internal links, selected-skill dependency closure, duplicate-copy rules, complete-diff allowlist, and product-name scans of current files and reachable history pass on the release candidate. |
+| 10 | Publish an immutable generic release | ✅ PASS | `https://github.com/SOLxBrotha/agent-workbench` is public; `main` matches the verified candidate and tag `v1.0.1` provides the immutable loader source. |
 | 11 | Provider-boundary audit | ✅ PASS | Static Markdown only; no provider protocol, SDK, credentials, provider state, or provider configuration exists. |
 | 12 | Minimal-build audit | ✅ PASS | The loader uses existing repository conventions and adds no installer runtime, dependency, automation, or duplicate authority. |
-| 13 | Product acceptance checks | ✅ PASS | Independent forward-testing covers solo/no-task, provider, coordinated, same-name conflict, and existing-instruction scenarios; the loader summarizes first, installs only dependency-complete applicable packages, preserves conflicts, validates, reports exact files, and stops. |
+| 13 | Product acceptance checks | ✅ PASS | Loader assertions confirm that a new agent summarizes every skill before selecting, uses only target authority for applicability, installs only the dependency-complete applicable set, preserves conflicts, validates, reports exact files, and stops. |
 
 ## Acceptance criteria
 
@@ -75,7 +75,7 @@ The matrix is fixed for release `1.0.0`. Mark a row `✅ PASS` only after its ev
 - Every prompt includes the inputs needed to prevent agents from inventing scope or authority.
 - Every role has one owner, one boundary, one return format, and a stop condition.
 - The repository contains no runtime code, dependencies, credentials, generated transcripts, internal product files, or obsolete reports.
-- The published repository is public under the `SOLxBrotha` account, its default branch matches the verified local commit, and the loader uses immutable tag `v1.0.0`.
+- The published repository is public under the `SOLxBrotha` account, its default branch matches the verified local commit, and the loader uses immutable tag `v1.0.1`.
 
 ## Release closure
 

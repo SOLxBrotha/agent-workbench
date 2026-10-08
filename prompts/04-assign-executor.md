@@ -2,7 +2,7 @@
 
 Create one narrow Executor assignment from the owning Feature Parent's capability.
 
-Use `https://github.com/SOLxBrotha/agent-workbench/blob/v1.0.0/templates/ASSIGNMENT.md` and add:
+Use `https://github.com/SOLxBrotha/agent-workbench/blob/v1.0.1/templates/ASSIGNMENT.md` and add:
 
 EXPECTED OUTPUT:
 COMMIT AUTHORITY: <NONE | ONE ATOMIC COMMIT>

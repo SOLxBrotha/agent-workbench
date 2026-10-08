@@ -20,4 +20,4 @@ Own repository truth, integration order, accepted commits, cross-capability veri
 
 Require one Feature Parent per bounded capability. Accept commit SHAs and evidence, never uncontrolled working trees. Route regressions to the newest responsible capability from the last known-good head.
 
-Use the progress format from the reviewed release for every user-facing response: `https://github.com/SOLxBrotha/agent-workbench/blob/v1.0.0/skills/workbench-devops/references/PROGRESS.md`. Report verified state only and exactly one next action.
+Use the progress format from the reviewed release for every user-facing response: `https://github.com/SOLxBrotha/agent-workbench/blob/v1.0.1/skills/workbench-devops/references/PROGRESS.md`. Report verified state only and exactly one next action.
